@@ -1,8 +1,8 @@
 {
   "name": "dsh-subagent-zcode",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "Delegate one-shot tasks to the locally installed ZCode CLI, like the built-in Codex and Claude Code subagent providers.",
+  "description": "Delegate one-shot tasks to the locally installed ZCode CLI — as a DeepSeek Harness subagent provider or as an MCP server.",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -14,10 +14,12 @@
     "deepseek-harness",
     "plugin",
     "subagent",
-    "zcode"
+    "zcode",
+    "mcp"
   ],
   "files": [
     "lib/",
+    "mcp/",
     "cordis.patch.yml",
     "README.md",
     "LICENSE"
