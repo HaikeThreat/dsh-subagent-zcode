@@ -1,0 +1,14 @@
+- insert:
+    - id: subagent-zcode
+      name: 'dsh-subagent-zcode'
+      config:
+        providerName: zcode
+        # 权限模式：plan / build / edit / guarded / yolo。
+        # edit = 改文件时逐步确认；yolo = 自动批准一切，公开分享请保持 edit。
+        mode: edit
+    - id: tool-subagent-zcode
+      name: '@deepseek-ai/dsh-tool-subagent'
+      config:
+        provider: zcode
+        toolName: subagent_zcode
+        maxDepth: provider-managed

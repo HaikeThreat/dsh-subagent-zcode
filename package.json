@@ -1,0 +1,42 @@
+{
+  "name": "dsh-subagent-zcode",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Delegate one-shot tasks to the locally installed ZCode CLI, like the built-in Codex and Claude Code subagent providers.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaikeThreat/dsh-subagent-zcode.git"
+  },
+  "homepage": "https://github.com/HaikeThreat/dsh-subagent-zcode#readme",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "subagent",
+    "zcode"
+  ],
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-subagent": "0.2.1-rc.5"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-tool-subagent": "0.2.1-rc.5",
+    "@deepseek-ai/schemastery": "~3.18.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
