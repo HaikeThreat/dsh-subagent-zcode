@@ -1,6 +1,6 @@
 {
   "name": "dsh-subagent-zcode",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Delegate one-shot tasks to the locally installed ZCode CLI — as a DeepSeek Harness subagent provider or as an MCP server.",
   "license": "MIT",
@@ -30,11 +30,11 @@
     ".": "./lib/index.js"
   },
   "peerDependencies": {
-    "@deepseek-ai/dsh-subagent": "0.2.1-rc.5"
+    "@deepseek-ai/dsh-subagent": "0.2.2-rc.1"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-tool-subagent": "0.2.1-rc.5",
-    "@deepseek-ai/schemastery": "~3.18.5"
+    "@deepseek-ai/dsh-tool-subagent": "0.2.2-rc.1",
+    "@deepseek-ai/schemastery": "~3.19.0"
   },
   "dsh": {
     "bundle": {

@@ -158,10 +158,19 @@ printf '%s\n' \
 
 ## 版本兼容（仅 DSH 插件）
 
-`peerDependencies` 精确钉在 `@deepseek-ai/dsh-subagent@0.2.1-rc.5`，与 DSH 运行时的兼容闸一致。
+`peerDependencies` 精确钉在 `@deepseek-ai/dsh-subagent@0.2.2-rc.1`。DSH 的兼容闸要求声明的 peer 与宿主运行时版本严格一致，peer 对不上就会被拦下（插件页会显示「异常」），所以按版本选装：
 
-- 用在 0.2.1-rc.5：直接装。
-- 用在 0.2.2-alpha 线：会被兼容闸拒绝，需要改 peer 版本后重打包（两套实现 API 有差异，不保证可用）。
+| 你的 DSH | 装哪个 | 说明 |
+|---|---|---|
+| **0.2.2-rc.1**（当前 `latest`） | 本版本（v0.3.x） | 声明 `0.2.2-rc.1` |
+| 0.2.1-rc.5（旧稳定线） | `v0.1.0` 标签 | 那一版声明的是 `0.2.1-rc.5` |
+| 0.2.2-alpha.x | 不支持 | 预览版，API 有差异 |
+
+旧线安装示例：
+
+```bash
+dsh plugin --profile desktop add "git+https://github.com/HaikeThreat/dsh-subagent-zcode.git#v0.1.0"
+```
 
 **MCP 方式不受此限制**，与 DSH 版本无关。
 
